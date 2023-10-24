@@ -1,6 +1,6 @@
 <script setup>
 defineProps({
-  team: {
+  player: {
     type: Object,
     required: true
   }
@@ -9,14 +9,20 @@ defineProps({
 
 <template>
   <div class="away-team-column">
-    <span> {{ team.image }} {{ team.name }} {{ team.position }} {{ team.team }} {{ team.points }}</span>
+    <img v-bind:src="player.thumbnail">
+    <span> {{ player.position }} {{ player.name }} {{ player.team }} {{ player.points }}</span>
     
   </div>
 </template>
+  
 
 <style scoped>
 .away-team-column {
   padding: 20px;
   border: 0.5px solid black;
+}
+img {
+  border-radius: 30%;
+  width: 65px;
 }
 </style>

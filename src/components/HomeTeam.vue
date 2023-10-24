@@ -1,6 +1,8 @@
 <script setup>
+import PlayerBox from './PlayerBox.vue';
+
 defineProps({
-  team: {
+  player: {
     type: Object,
     required: true
   }
@@ -10,8 +12,7 @@ defineProps({
 <template>
   <div class="home-team-column">
 
-    <span>{{ team.name }} {{ team.position }} {{ team.team }} {{ team.points }}</span>
-    
+  <PlayerBox :player="player"/>    
   </div>
 </template>
 

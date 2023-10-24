@@ -8,7 +8,7 @@ const teamOne = ref([
     id: 1,
     name: 'J. Hurts',
     position: 'QB',
-    thumbnail: 'image',
+    thumbnail: " ../src/assets/images/hurtsthumbnail.png ",
     points: 0,
     team: 'Phi'
   },
@@ -16,7 +16,7 @@ const teamOne = ref([
     id: 2,
     name: 'T. Hill',
     position: 'WR',
-    thumbnail: 'image',
+    thumbnail: " ../src/assets/images/hillthumbnail.png ",
     points: 0,
     team: 'Mia'
   },
@@ -24,7 +24,7 @@ const teamOne = ref([
     id: 3,
     name: 'M. Evans',
     position: 'WR',
-    thumbnail: 'image',
+    thumbnail: " ../src/assets/images/evansthumbnail.png ",
     points: 0,
     team: 'TB'
   },
@@ -32,7 +32,7 @@ const teamOne = ref([
     id: 4,
     name: 'C. McCaffrey',
     position: 'RB',
-    thumbnail: 'image',
+    thumbnail: " ../src/assets/images/mccaffreythumbnail.png ",
     points: 0,
     team: 'SF'
   },
@@ -40,7 +40,7 @@ const teamOne = ref([
     id: 5,
     name: 'A. Kamara',
     position: 'RB',
-    thumbnail: 'image',
+    thumbnail: " ../src/assets/images/kamarathumbnail.png ",
     points: 0,
     team: 'NO'
   },
@@ -48,15 +48,15 @@ const teamOne = ref([
     id: 6,
     name: 'M. Andrews',
     position: 'TE',
-    thumbnail: 'image',
+    thumbnail: " ../src/assets/images/andrewsthumbnail.png ",
     points: 0,
     team: 'KC'
   },
   {
     id: 7,
-    name: 'J. Tuckers',
+    name: 'J. Tucker',
     position: 'K',
-    thumbnail: 'image',
+    thumbnail: " ../src/assets/images/tuckerthumbnail.png ",
     points: 0,
     team: 'BAL'
   },
@@ -64,7 +64,7 @@ const teamOne = ref([
     id: 8,
     name: 'Cleveland',
     position: 'DEF',
-    thumbnail: 'image',
+    thumbnail: " ../src/assets/images/cleveland.png ",
     points: 0,
     team: 'CLE'
   }
@@ -75,7 +75,7 @@ const teamTwo = ref([
     id: 9,
     name: 'P. Mahomes',
     position: 'QB',
-    thumbnail: 'image',
+    thumbnail: " ../src/assets/images/mahomesthumbnail.png ",
     points: 0,
     team: 'KC'
   },
@@ -83,23 +83,23 @@ const teamTwo = ref([
     id: 10,
     name: 'J. Chase',
     position: 'WR',
-    thumbnail: 'image',
+    thumbnail: " ../src/assets/images/chasethumbnail.png ",
     points: 0,
     team: 'CIN'
   },
   {
     id: 11,
-    name: 'C. Ridley',
+    name: 'J. Jefferson',
     position: 'WR',
-    thumbnail: 'image',
+    thumbnail: " ../src/assets/images/jeffersonthumbnail.png ",
     points: 0,
-    team: 'JAX'
+    team: 'MIN'
   },
   {
     id: 12,
     name: 'A. Ekeler',
     position: 'RB',
-    thumbnail: 'image',
+    thumbnail: " ../src/assets/images/ekelerthumbnail.png ",
     points: 0,
     team: 'LAC'
   },
@@ -107,7 +107,7 @@ const teamTwo = ref([
     id: 13,
     name: 'D. Henry',
     position: 'RB',
-    thumbnail: 'image',
+    thumbnail: " ../src/assets/images/henrythumbnail.png ",
     points: 0,
     team: 'TEN'
   },
@@ -115,7 +115,7 @@ const teamTwo = ref([
     id: 14,
     name: 'T. Kelce',
     position: 'TE',
-    thumbnail: 'image',
+    thumbnail: " ../src/assets/images/kelcethumbnail.png ",
     points: 0,
     team: 'KC'
   },
@@ -123,7 +123,7 @@ const teamTwo = ref([
     id: 15,
     name: 'R. Patterson',
     position: 'K',
-    thumbnail: 'image',
+    thumbnail: " ../src/assets/images/pattersonthumbnail.png ",
     points: 0,
     team: 'DET'
   },
@@ -131,7 +131,7 @@ const teamTwo = ref([
     id: 16,
     name: 'Dallas',
     position: 'DEF',
-    thumbnail: 'image',
+    thumbnail: " ../src/assets/images/cowboys.png ",
     points: 0,
     team: 'DAL'
   }
@@ -142,11 +142,11 @@ const teamTwo = ref([
   <h1 class="week">Week 1 Matchup!</h1>
   <container class="container">
     <div class="home-team">
-      <HomeTeam v-for="team in teamOne" :key="team.id" :team="team" />
+      <HomeTeam v-for="player in teamOne" :key="player.id" :player="player" />
     </div>
     
     <div class="away-team">
-      <AwayTeam v-for="team in teamTwo" :key="team.id" :team="team" />
+      <AwayTeam v-for="player in teamTwo" :key="player.id" :player="player" />
     </div>
   </container>
 </template>
