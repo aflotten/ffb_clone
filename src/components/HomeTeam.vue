@@ -1,5 +1,5 @@
 <script setup>
-import PlayerBox from './PlayerBox.vue';
+import PlayerBoxHome from './PlayerBoxHome.vue';
 
 defineProps({
   player: {
@@ -12,13 +12,13 @@ defineProps({
 <template>
   <div class="home-team-column">
 
-  <PlayerBox :player="player"/>    
+  <PlayerBoxHome :player="player"/>    
   </div>
 </template>
 
 <style scoped>
-.home-team-column {
+/* .home-team-column {
   padding: 20px;
-  border: 0.5px solid black;
-}
+  border: 0.5px solid gray;
+} */
 </style>

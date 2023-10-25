@@ -1,4 +1,6 @@
 <script setup>
+import PlayerBoxAway from './PlayerBoxAway.vue';
+
 defineProps({
   player: {
     type: Object,
@@ -9,9 +11,7 @@ defineProps({
 
 <template>
   <div class="away-team-column">
-    <img v-bind:src="player.thumbnail">
-    <span> {{ player.position }} {{ player.name }} {{ player.team }} {{ player.points }}</span>
-    
+    <PlayerBoxAway :player="player"/>
   </div>
 </template>
   
@@ -19,7 +19,7 @@ defineProps({
 <style scoped>
 .away-team-column {
   padding: 20px;
-  border: 0.5px solid black;
+  border: 0.5px solid gray;
 }
 img {
   border-radius: 30%;
